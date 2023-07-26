@@ -3,21 +3,20 @@ class Node:
         self.value=value
         self.next=None
 class Stack:
-    def __init__(self,value):
-        new_node=Node(value)
-        self.top=new_node
-
+    def __init__(self):
+        self.top=None
     def push(self,value):
         new=Node(value)
         new.next=self.top
         self.top=new
-
     def pop(self):
-        temp=self.top
-        self.top=self.top.next
-        temp.next=None
-        return temp.value
-
+        if self.top==None:
+            return None
+        else:
+            temp = self.top
+            self.top = self.top.next
+            temp.next = None
+            return temp.value
     def size(self):
         count=0
         temp=self.top
@@ -25,18 +24,21 @@ class Stack:
             count+=1
             temp=temp.next
         return count
-
     def isEmpty(self):
-        elem=self.size()
-        if elem==0:
+        count = 0
+        temp = self.top
+        while temp != None:
+            count += 1
+            temp = temp.next
+
+        if count == 0:
             return True
         return False
-
     def peek(self):
         temp=self.top
-        temp.next=None
-        return temp
-
+        if temp==None:
+            return None
+        return temp.value
     def printStack(self):
         temp=self.top
         while temp!=None:
@@ -44,4 +46,10 @@ class Stack:
             print("|___|")
             temp=temp.next
 
-s=Stack(1)
+s=Stack()
+s.push(5)
+s.push(7)
+s.push(5)
+s.push(9)
+s.printStack()
+
