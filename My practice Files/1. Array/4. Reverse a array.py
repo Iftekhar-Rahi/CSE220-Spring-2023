@@ -1,4 +1,5 @@
-a=[10,20,30,40,50]
+import numpy as np
+a=np.array([10,20,30,40,50])
 i=0
 j=len(a)-1
 #with while loop

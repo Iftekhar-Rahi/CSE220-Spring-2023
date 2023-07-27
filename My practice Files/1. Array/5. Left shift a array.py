@@ -1,4 +1,5 @@
-arr=[10,20,30,40,50]
+import numpy as np
+arr=np.array([10,20,30,40,50])
 def left_shift(arr):
     temp=arr[0]
     for i in range(len(arr)-1):
