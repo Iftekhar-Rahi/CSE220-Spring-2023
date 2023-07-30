@@ -5,7 +5,7 @@ def max(arr,x):
         return arr[0]
     else:
         y=max(arr,x-1)
-        if arr[x]>y:
-            return arr[x]
-        return y
+        if y>arr[x]:
+            return y
+        return arr[x]
 print(max(arr,len(arr)-1))
