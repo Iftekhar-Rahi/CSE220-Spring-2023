@@ -19,6 +19,9 @@ c.next=d
 def print_ll(head):
     tail=head
     while tail!=None:
-        print(tail.value,end="-->")
+        if tail.next==None:
+            print(tail.value)
+        else:
+            print(tail.value,end="--> ")
         tail=tail.next
 print_ll(head)
