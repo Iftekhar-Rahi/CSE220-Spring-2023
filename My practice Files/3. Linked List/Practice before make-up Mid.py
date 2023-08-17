@@ -3,15 +3,10 @@ class Node:
         self.value=value
         self.next=None
 head=Node(11)
-
 a=Node(3)
-
 b=Node(23)
-
 c=Node(7)
-
 d=Node(4)
-
 head.next=a
 a.next=b
 b.next=c
