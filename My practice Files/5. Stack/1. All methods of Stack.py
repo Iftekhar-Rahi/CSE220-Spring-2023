@@ -31,7 +31,7 @@ class Stack:
             count += 1
             temp = temp.next
 
-        if count == 0:
+        if count =jj      = 0:
             return True
         return False
     def peek(self):
